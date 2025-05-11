@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Password Strength Checker</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Password Strength Checker</h1>
+    
+    <div class="input-group">
+      <input type="password" id="password" class="password-input" placeholder="Enter your password" autocomplete="off">
+      <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+    </div>
+    
+    <div class="strength-meter">
+      <div class="strength-meter-fill" id="strengthMeterFill"></div>
+    </div>
+    
+    <div class="strength-text" id="strengthText"></div>
+    
+<div class="requirements" id="requirements">
+  <ul>
+    <li id="lengthReq" data-label="At least 8 characters long">❌ At least 8 characters long</li>
+    <li id="uppercaseReq" data-label="Contains uppercase letters">❌ Contains uppercase letters</li>
+    <li id="lowercaseReq" data-label="Contains lowercase letters">❌ Contains lowercase letters</li>
+    <li id="numberReq" data-label="Contains numbers">❌ Contains numbers</li>
+    <li id="specialReq" data-label="Contains special characters">❌ Contains special characters</li>
+  </ul>
+</div>
+    
+    <div class="score-details">
+      <div class="score-item">
+        <div class="score-value" id="entropyScore">0</div>
+        <div class="score-label">Entropy Score</div>
+      </div>
+      <div class="score-item">
+        <div class="score-value" id="varietyScore">0</div>
+        <div class="score-label">Character Variety</div>
+      </div>
+      <div class="score-item">
+        <div class="score-value" id="lengthScore">0</div>
+        <div class="score-label">Length Points</div>
+      </div>
+      <div class="score-item">
+        <div class="score-value" id="totalScore">0</div>
+        <div class="score-label">Total Score</div>
+      </div>
+    </div>
+    
+    <div class="password-suggestions" id="suggestions"></div>
+    <div class="hint">Your password is never stored or transmitted</div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
